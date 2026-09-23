@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import type { Recipe } from '@carrot-eaters/shared';
+import type { Recipe } from '@/lib/shared';
 import { useTranslations } from 'next-intl';
 
 /** A recipe row plus just enough of its ingredients to search through them. */

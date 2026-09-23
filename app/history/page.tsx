@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { requireUser, fetchProfile } from '@/lib/auth';
-import { zonedPeriodRangeUtc, zonedDateKey, macroTargets } from '@carrot-eaters/shared';
+import { zonedPeriodRangeUtc, zonedDateKey, macroTargets } from '@/lib/shared';
 import { AppHeader } from '@/components/AppHeader';
 import { getTranslations } from 'next-intl/server';
 

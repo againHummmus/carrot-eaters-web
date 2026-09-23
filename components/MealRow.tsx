@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
-import type { MealWithItems } from '@carrot-eaters/shared';
+import type { MealWithItems } from '@/lib/shared';
 import { useLocale, useTranslations } from 'next-intl';
 
 export function MealRow({ meal, delay = 0 }: { meal: MealWithItems; delay?: number }) {

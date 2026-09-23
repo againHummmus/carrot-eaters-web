@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { createClient } from './supabase/server';
-import type { Profile } from '@carrot-eaters/shared';
+import type { Profile } from '@/lib/shared';
 
 export async function requireUser(redirectTo = '/login') {
   const supabase = await createClient();

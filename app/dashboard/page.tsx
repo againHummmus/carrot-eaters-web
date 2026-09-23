@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { requireUser, fetchProfile } from '@/lib/auth';
-import { todayRangeUtc, type MealWithItems } from '@carrot-eaters/shared';
+import { todayRangeUtc, type MealWithItems } from '@/lib/shared';
 import { AppHeader } from '@/components/AppHeader';
 import { DaySummary } from '@/components/DaySummary';
 import { getTranslations } from 'next-intl/server';

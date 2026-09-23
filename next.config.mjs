@@ -10,8 +10,6 @@ const withPWA = withPWAInit({
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  transpilePackages: ['@carrot-eaters/shared'],
-};
+const nextConfig = {};
 
 export default withNextIntl(withPWA(nextConfig));

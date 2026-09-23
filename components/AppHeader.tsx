@@ -7,12 +7,28 @@ import { useTranslations } from 'next-intl';
 import { signOut } from '@/app/settings/actions';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 
+function BasketIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden className="h-4 w-4 shrink-0">
+      <path
+        d="M5.5 9.5h13l-1.2 8a2 2 0 0 1-2 1.7H8.7a2 2 0 0 1-2-1.7l-1.2-8Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path d="M9 9.5 12 4l3 5.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function AppHeader() {
   const t = useTranslations('nav');
+  const shopping = useTranslations('shopping');
   const links = [
     { href: '/dashboard', label: t('today') },
     { href: '/history', label: t('history') },
     { href: '/recipes', label: t('recipes') },
+    { href: '/shopping', label: shopping('open'), icon: <BasketIcon /> },
     { href: '/settings', label: t('settings') },
   ];
   const pathname = usePathname();
@@ -70,10 +86,11 @@ export function AppHeader() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`flex items-center rounded-xl px-3 py-2 text-sm transition-colors ${
+                  className={`flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition-colors ${
                     active ? 'bg-emerald-50 font-medium text-emerald-700' : 'text-slate-600 hover:bg-slate-50'
                   }`}
                 >
+                  {link.icon}
                   {link.label}
                 </Link>
               );

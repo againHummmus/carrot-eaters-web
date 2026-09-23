@@ -1,7 +1,7 @@
 import { notFound, redirect } from 'next/navigation';
 import Link from 'next/link';
 import { requireUser, fetchProfile } from '@/lib/auth';
-import type { RecipeWithIngredients } from '@carrot-eaters/shared';
+import type { RecipeWithIngredients } from '@/lib/shared';
 import { AppHeader } from '@/components/AppHeader';
 import { getTranslations } from 'next-intl/server';
 import { RecipeDetail } from './RecipeDetail';

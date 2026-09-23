@@ -69,6 +69,11 @@ function LoginForm() {
             {loading ? t('submitting') : t('submit')}
           </button>
         </form>
+        <p className="text-center text-sm">
+          <Link href="/forgot-password" className="text-slate-500 transition-colors hover:text-slate-700">
+            {t('forgot')}
+          </Link>
+        </p>
         <p className="text-center text-sm text-slate-500">
           {t('noAccount')}{' '}
           <Link href="/register" className="font-medium text-emerald-600 hover:text-emerald-700">

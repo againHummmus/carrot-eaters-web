@@ -1,4 +1,4 @@
-import { macroTargets, DAILY_NORMS, sumNutrients, type MealWithItems, type Profile } from '@carrot-eaters/shared';
+import { macroTargets, DAILY_NORMS, sumNutrients, type MealWithItems, type Profile } from '@/lib/shared';
 import { ProgressBar } from '@/components/ProgressBar';
 import { MealRow } from '@/components/MealRow';
 import { getTranslations } from 'next-intl/server';

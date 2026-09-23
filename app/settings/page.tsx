@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { requireUser, fetchProfile } from '@/lib/auth';
-import { macroTargets } from '@carrot-eaters/shared';
+import { macroTargets } from '@/lib/shared';
 import { AppHeader } from '@/components/AppHeader';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { getTranslations } from 'next-intl/server';

@@ -4,15 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "cd ../.. && npm run build -w packages/shared && cd apps/web && node scripts/check-messages.mjs && next build --webpack",
+    "build": "node scripts/check-messages.mjs && next build --webpack",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "check:messages": "node scripts/check-messages.mjs"
   },
   "dependencies": {
-    "@carrot-eaters/shared": "*",
     "@supabase/ssr": "^0.12.5",
     "@supabase/supabase-js": "^2.112.4",
+    "luxon": "^3.7.2",
     "next": "^16.3.4",
     "next-intl": "^4.14.2",
     "react": "^19.2.8",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@ducanh2912/next-pwa": "^10.2.9",
     "@tailwindcss/postcss": "^4.3.3",
+    "@types/luxon": "^3.7.1",
     "@types/node": "^22.10.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
