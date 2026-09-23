@@ -4,8 +4,21 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-09-15",
   "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "carrot-eaters.xyz",
+      "zone_name": "carrot-eaters.xyz",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
+  },
+  "vars": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://buqpdekcvcbwgzmdrguh.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_PbBEf0uOZKK5n_waHoufxA_dY1D6YtY"
   }
 }
